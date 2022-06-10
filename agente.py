@@ -10,5 +10,5 @@ class EntornoCondominio(Casas):
     print("---------- AIRE ACONDICIONADO INTELIGENTE -----------")
     print("Estado: ")
     print(casa.ubicacionestado)
-    robotubicacion = random.randint(0,6)
+    ubicacion = random.randint(0,6)
     costo=0
