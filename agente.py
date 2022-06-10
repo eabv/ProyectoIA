@@ -82,3 +82,10 @@ class EntornoCondominios(Casas):
                      print("El agente no detecta movimiento en la casa 7\n")
                      print("Total de costo:", costo)              
 
+class EntornoCondominio(Casas):
+  def __init__(self, casa):
+    print("---------- AIRE ACONDICIONADO INTELIGENTE -----------")
+    print("Estado: ")
+    print(casa.ubicacionestado)
+    ubicacion = random.randint(0,6)
+    costo=0
