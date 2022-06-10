@@ -219,6 +219,7 @@ class EntornoCondominios(Casas):
                     print("Total de costo:", costo)
 
 ######################################################################################################################
+        #Ubicación de la casa 1 si detecta movimiento activa el aire acondicionado 
         elif ubicacion == 1:
 
             if casa.ubicacionestado['C2'] == 1:
@@ -367,6 +368,7 @@ class EntornoCondominios(Casas):
                     print("Total de costo:", costo)
 
 #########################################################################################################
+        #El agente verifica si en la casa 2 se detecta movimiento realiza el activado del aire
         elif ubicacion == 2:
 
             if casa.ubicacionestado['C3'] == 1:
@@ -444,7 +446,7 @@ class EntornoCondominios(Casas):
                     print("El agente no detecta movimiento en la casa 2\n")
                     print("Total de costo:", costo)
 
-                    # Si la casa 3 esta sin mala hierba, el robot se mueve hacia la casa 4 y despues a la casa 5
+            # Si la casa 3 no detecta movimiento, el agente se mueve hacia la casa 4 y despues a la casa 5
             else:
                 print(
                     "El agente no detecta movimiento en la casa 3, el agente pasa a la casa 4\n")
@@ -516,9 +518,9 @@ class EntornoCondominios(Casas):
                 else:
                     print("El agente no detecta movimiento en la casa 2\n")
                     print("Total de costo:", costo)
-# 3
-        elif ubicacion == 3:
+        #En la ubicacion de la casa 3 detecta movimiento 
 
+        elif ubicacion == 3:
             if casa.ubicacionestado['C4'] == 1:
                 print("Se detecta movimiento en la casa 4")
                 casa.ubicacionestado['C4'] == 0
@@ -593,7 +595,7 @@ class EntornoCondominios(Casas):
                 else:
                     print("El agente no detecta movimiento en la casa 3\n")
                     print("Total de costo:", costo)
-# Si la casa 4 esta sin mala hierba
+            # Si la casa 4 No detecta movimiento sigue a la siguiente casa
             else:
                 print(
                     "El agente no detecta movimiento en la casa 4, el agente pasa a la casa 5\n")
@@ -667,7 +669,7 @@ class EntornoCondominios(Casas):
                     print("Total de costo:", costo)
 ######################################################################################################################
 
-#El robot agricultor comienza por la casa 5
+#El agente comienza por la casa 5
         elif ubicacion == 4:
             
             if casa.ubicacionestado['C5'] == 1:
@@ -734,7 +736,7 @@ class EntornoCondominios(Casas):
                 else:
                      print("El agente no detecta movimiento en la casa 4\n")
                      print("Total de costo:", costo)
-# Si la casa 5 esta sin mala hierba
+            # Si la casa 5 no se detecta nigun movimiento, sigue su recorrido
             else:               
                 print("El agente no detecta movimiento en la casa 5, el agente pasa a la casa 6\n")
                
