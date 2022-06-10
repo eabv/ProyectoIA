@@ -5,3 +5,10 @@ class Casas(object):
                             'C4': random.randint(0,1), 'C5': random.randint(0,1), 'C6': random.randint(0,1),
                             'C7': random.randint(0,1)}
 
+class EntornoCondominio(Casas):
+  def __init__(self, casa):
+    print("---------- AIRE ACONDICIONADO INTELIGENTE -----------")
+    print("Estado: ")
+    print(casa.ubicacionestado)
+    robotubicacion = random.randint(0,6)
+    costo=0
