@@ -668,8 +668,7 @@ class EntornoCondominios(Casas):
                     print("El agente no detecta movimiento en la casa 3\n")
                     print("Total de costo:", costo)
 ######################################################################################################################
-
-#El agente comienza por la casa 5
+    #El agente comienza por la casa 5
         elif ubicacion == 4:
             
             if casa.ubicacionestado['C5'] == 1:
@@ -798,6 +797,260 @@ class EntornoCondominios(Casas):
                       print("El agente no detecta movimiento en la casa 4\n")
                       print("Total de costo:", costo)
 
+################################################################################################################+
+#El agente comienza por la casa 6
+        elif ubicacion == 5:
+            if casa.ubicacionestado['C6'] == 1:
+                print("Se detecta movimiento en la casa 6")
+                casa.ubicacionestado['C6'] == 0
+                costo = costo + 1
+                print("Se activa el aire acondicionado en la casa 6, el agente pasa a la casa 7")
+                print("costo:", costo, "\n") 
+
+                if casa.ubicacionestado['C7'] == 1:
+                    print("Se detecta movimiento en la casa 7")
+                    casa.ubicacionestado['C7'] == 0
+                    costo = costo + 1                      
+                    print("Se activa el aire acondicionado en la casa 7, el agente pasa a la casa 1")
+                    print("costo:", costo, "\n")    
+                else:
+                   print("El agente no detecta movimiento en la casa 7, el agente pasa a la casa 1\n")
+                if casa.ubicacionestado['C1'] == 1:
+                         print("Se detecta movimiento en la casa 1")
+                         casa.ubicacionestado['C1'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 1, el agente pasa a la casa 2")
+                         print("costo:", costo, "\n")                          
+                else:
+                     print("El agente no detecta movimiento en la casa 1, el agente pasa a la casa 2\n")
+                                
+                
+                if casa.ubicacionestado['C2'] == 1:
+                         print("Se detecta movimiento en la casa 2")
+                         casa.ubicacionestado['C2'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 2, el agente pasa a la casa 3")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 2, el agente pasa a la casa 3\n")     
+                
+                if casa.ubicacionestado['C3'] == 1:
+                         print("Se detecta movimiento en la casa 3")
+                         casa.ubicacionestado['C3'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 3, el agente pasa a la casa 4")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 3, el agente pasa a la casa 4\n")
+                    
+                if casa.ubicacionestado['C4'] == 1:
+                         print("Se detecta movimiento en la casa 4")
+                         casa.ubicacionestado['C4'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 4, el agente pasa a la casa 5")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 4, el agente pasa a la casa 5\n")
+                
+                if casa.ubicacionestado['C5'] == 1:
+                         print("Se detecta movimiento en la casa 5")
+                         casa.ubicacionestado['C5'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 5")
+                         print("Total de costo:", costo)  
+                else:
+                     print("El agente no detecta movimiento en la casa 5\n")
+                     print("Total de costo:", costo)
+            # Si la casa 6 no se detecta nigun movimiento, sigue su recorrido
+            else:               
+                print("El agente no detecta movimiento en la casa 6, el agente pasa a la casa 7\n")
+               
+                if casa.ubicacionestado['C7'] == 1:
+                    print("Se detecta movimiento en la casa 7")
+                    casa.ubicacionestado['C7'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 7, el agente pasa a la casa 1")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 7, el agente pasa a la casa 1\n")
+
+                if casa.ubicacionestado['C1'] == 1:
+                     print("Se detecta movimiento en la casa 1")
+                     casa.ubicacionestado['C1'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 1, el agente pasa a la casa 2")
+                     print("costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 1, el agente pasa a la casa 2\n")
+                    
+                if casa.ubicacionestado['C2'] == 1:
+                    print("Se detecta movimiento en la casa 2")
+                    casa.ubicacionestado['C2'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 2, el agente pasa a la casa 3")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 2, el agente pasa a la casa 3\n")
+
+                if casa.ubicacionestado['C3'] == 1:
+                     print("Se detecta movimiento en la casa 3")
+                     casa.ubicacionestado['C3'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 3, el agente pasa a la casa 4")
+                     print("costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 3, el agente pasa a la casa 4\n")
+                
+                if casa.ubicacionestado['C4'] == 1:
+                    print("Se detecta movimiento en la casa 4")
+                    casa.ubicacionestado['C4'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 4, el agente pasa a la casa 5")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 4, el agente pasa a la casa 5\n")
+
+                if casa.ubicacionestado['C5'] == 1:
+                     print("Se detecta movimiento en la casa 5")
+                     casa.ubicacionestado['C5'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 5")
+                     print("Total de costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 5\n")
+                      print("Total de costo:", costo)
+#############################################################################################################
+#El agente comienza por la casa 7
+        elif ubicacion == 6:
+            
+            if casa.ubicacionestado['C7'] == 1:
+                print("Se detecta movimiento en la casa 7")
+                casa.ubicacionestado['C7'] == 0
+                costo = costo + 1
+                print("Se activa el aire acondicionado en la casa 7, el agente pasa a la casa 1")
+                print("costo:", costo, "\n") 
+
+                if casa.ubicacionestado['C1'] == 1:
+                    print("Se detecta movimiento en la casa 1")
+                    casa.ubicacionestado['C1'] == 0
+                    costo = costo + 1                      
+                    print("Se activa el aire acondicionado en la casa 1, el agente pasa a la casa 2")
+                    print("costo:", costo, "\n")    
+
+                else:
+                   print("El agente no detecta movimiento en la casa 1, el agente pasa a la casa 2\n")
+
+                if casa.ubicacionestado['C2'] == 1:
+                         print("Se detecta movimiento en la casa 2")
+                         casa.ubicacionestado['C2'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 2, el agente pasa a la casa 3")
+                         print("costo:", costo, "\n")   
+                         
+                else:
+                     print("El agente no detecta movimiento en la casa 2, el agente pasa a la casa 3\n")
+                                
+                
+                if casa.ubicacionestado['C3'] == 1:
+                         print("Se detecta movimiento en la casa 3")
+                         casa.ubicacionestado['C3'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 3, el agente pasa a la casa 4")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 3, el agente pasa a la casa 4\n")     
+                
+                if casa.ubicacionestado['C4'] == 1:
+                         print("Se detecta movimiento en la casa 4")
+                         casa.ubicacionestado['C4'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 4, el agente pasa a la cas 5")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 4, el agente pasa a la casa 5\n")
+                    
+                if casa.ubicacionestado['C5'] == 1:
+                         print("Se detecta movimiento en la casa 5")
+                         casa.ubicacionestado['C5'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 5, el agente pasa a la casa 6")
+                         print("costo:", costo, "\n")  
+                else:
+                     print("El agente no detecta movimiento en la casa 5, el agente pasa a la casa 6\n")
+                
+                if casa.ubicacionestado['C6'] == 1:
+                         print("Se detecta movimiento en la casa 6")
+                         casa.ubicacionestado['C6'] == 0
+                         costo = costo + 1
+                         print("Se activa el aire acondicionado en la casa 6")
+                         print("Total de costo:", costo)  
+                else:
+                     print("El agente no detecta movimiento en la casa 6\n")
+                     print("Total de costo:", costo)
+            # Si la casa 7 no se detecta nigun movimiento, sigue su recorrido
+            else:               
+                print("El agente no detecta movimiento en la casa 7, el agente pasa a la casa 1\n")
+               
+                if casa.ubicacionestado['C1'] == 1:
+                    print("Se detecta movimiento en la casa 1")
+                    casa.ubicacionestado['C1'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 1, el agente pasa a la casa 2")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 1, el agente pasa a la casa 2\n")
+
+                if casa.ubicacionestado['C2'] == 1:
+                     print("Se detecta movimiento en la casa 2")
+                     casa.ubicacionestado['C2'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 2, el agente pasa a la casa 3")
+                     print("costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 2, el agente pasa a la casa 3\n")
+                    
+                if casa.ubicacionestado['C3'] == 1:
+                    print("Se detecta movimiento en la casa 3")
+                    casa.ubicacionestado['C3'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 3, el agente pasa a la casa 4")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 3, el agente pasa a la casa 4\n")
+
+                if casa.ubicacionestado['C4'] == 1:
+                     print("Se detecta movimiento en la casa 4")
+                     casa.ubicacionestado['C4'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 4, el agente pasa a la casa 5")
+                     print("costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 4, el agente pasa a la casa 5\n")
+                
+                if casa.ubicacionestado['C5'] == 1:
+                    print("Se detecta movimiento en la casa 5")
+                    casa.ubicacionestado['C5'] == 0
+                    costo = costo + 1
+                    print("Se activa el aire acondicionado en la casa 5, el agente pasa a la casa 6")
+                    print("costo:", costo, "\n")  
+                else: 
+                    print("El agente no detecta movimiento en la casa 5, el agente pasa a la casa 6\n")
+
+                if casa.ubicacionestado['C6'] == 1:
+                     print("Se detecta movimiento en la casa 6")
+                     casa.ubicacionestado['C6'] == 0
+                     costo = costo + 1
+                     print("Se activa el aire acondicionado en la casa 6")
+                     print("Total de costo:", costo, "\n")  
+
+                else:
+                      print("El agente no detecta movimiento en la casa 6\n")
+                      print("Total de costo:", costo)
 
 entorno = Casas()
 condominios = EntornoCondominios(entorno)
